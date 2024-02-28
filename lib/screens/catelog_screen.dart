@@ -10,6 +10,6 @@ class CatelogScreen extends StatefulWidget {
 class _CatelogScreenState extends State<CatelogScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold();
   }
 }

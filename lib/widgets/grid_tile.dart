@@ -37,7 +37,8 @@ class CustomGridTile extends StatelessWidget {
         children: [
           Container(
             height: height,
-            decoration: BoxDecoration(image: DecorationImage(image: NetworkImage(category.imageUrl))),
+            decoration:
+                BoxDecoration(image: DecorationImage(fit: BoxFit.cover, image: NetworkImage(category.imageUrl))),
           ),
           isHovered
               ? Column(

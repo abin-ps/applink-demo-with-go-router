@@ -9,7 +9,7 @@ final routes = GoRouter(
       builder: (_, __) => const CategoryScreen(),
       routes: [
         GoRoute(
-          path: '/catelog',
+          path: 'catelog',
           builder: (_, __) => const CatelogScreen(),
         )
       ],

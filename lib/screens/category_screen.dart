@@ -38,9 +38,10 @@ class _CategoryScreenState extends State<CategoryScreen> {
       body: Padding(
         padding: const EdgeInsets.only(left: 4.0, right: 4, top: 12),
         child: MasonryGridView.count(
-          crossAxisCount: 4,
+          crossAxisCount: 3,
           mainAxisSpacing: 4,
           crossAxisSpacing: 4,
+          itemCount: _categories.length,
           itemBuilder: (context, index) {
             return CustomGridTile(
               onTap: (int index) {
