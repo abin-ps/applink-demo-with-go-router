@@ -2,9 +2,10 @@ class Category {
   final String id;
   final String name;
   final String? description;
+  bool isHovered;
   final String imageUrl;
 
-  const Category({required this.id, required this.name, this.description, required this.imageUrl});
+  Category({required this.id, required this.name, this.description, this.isHovered = false, required this.imageUrl});
 
   factory Category.fromJson(Map<String, dynamic> json, {String? id}) => Category(
         id: id ?? json['id'] ?? '',
@@ -12,7 +13,7 @@ class Category {
         description: json['description'],
         imageUrl: json['imageUrl'] ?? 'https://w0.peakpx.com/wallpaper/410/412/HD-wallpaper-plain-black-black.jpg',
       );
-  static List<Category> categories = const [
+  static List<Category> categories = [
     Category(
       id: '1',
       name: 'Sports',

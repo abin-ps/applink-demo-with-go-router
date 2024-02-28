@@ -46,9 +46,24 @@ class _CategoryScreenState extends State<CategoryScreen> {
               onTap: (int index) {
                 //todo navigate to catelog screen
               },
+              onHover: (bool value) {
+                print(value);
+                if (value) {
+                  setState(() {
+                    _categories[index].isHovered = true;
+                  });
+                } else {
+                  {
+                    setState(() {
+                      _categories[index].isHovered = false;
+                    });
+                  }
+                }
+              },
               index: index,
               extendsList: extendsList,
-              bgImage: _categories[index].imageUrl,
+              category: _categories[index],
+              isHovered: _categories[index].isHovered,
             );
           },
         ),
