@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:go_router/go_router.dart';
 
 import '../models/category.dart';
 import '../widgets/grid_tile.dart';
@@ -46,6 +47,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
             return CustomGridTile(
               onTap: (int index) {
                 //todo navigate to catelog screen
+                context.push('/catelog', extra: {'id': _categories[index].id});
               },
               onHover: (bool value) {
                 print(value);

@@ -1,8 +1,6 @@
 import 'package:applink_demo/common_widgets/padded.dart';
 import 'package:flutter/material.dart';
 
-import '../models/category.dart';
-
 class CustomGridTile extends StatelessWidget {
   const CustomGridTile({
     super.key,
@@ -16,7 +14,7 @@ class CustomGridTile extends StatelessWidget {
   });
   final List<double> extendsList;
   final double maxHeight;
-  final Category category;
+  final dynamic category;
   final int index;
   final void Function(int)? onTap;
   final void Function(bool)? onHover;
@@ -32,7 +30,9 @@ class CustomGridTile extends StatelessWidget {
       onTap: () {
         onTap != null ? onTap!(index) : null;
       },
-      // onFocusChange: (value) {},
+      onFocusChange: (value) {
+        print('focus changed? $value');
+      },
       child: Stack(
         children: [
           Container(

@@ -3,10 +3,16 @@ class Catelog {
   final String categoryId;
   final String name;
   final String? description;
+  bool isHovered;
   final String imageUrl;
 
-  const Catelog(
-      {required this.id, required this.categoryId, required this.name, this.description, required this.imageUrl});
+  Catelog(
+      {required this.id,
+      required this.categoryId,
+      required this.name,
+      this.description,
+      this.isHovered = false,
+      required this.imageUrl});
 
   factory Catelog.fromJson(Map<String, dynamic> json, {String? id}) => Catelog(
         id: id ?? json['id'] ?? '',
@@ -15,7 +21,7 @@ class Catelog {
         description: json['description'],
         imageUrl: json['imageUrl'] ?? 'https://w0.peakpx.com/wallpaper/410/412/HD-wallpaper-plain-black-black.jpg',
       );
-  static List<Catelog> categories = const [
+  static List<Catelog> catelogs = [
     Catelog(
       id: '1',
       categoryId: '1',
