@@ -2,6 +2,7 @@ import 'package:applink_demo/models/catelog.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:share_plus/share_plus.dart';
 
 class PreviewScreen extends StatefulWidget {
   const PreviewScreen({
@@ -38,7 +39,8 @@ class _PreviewScreenState extends State<PreviewScreen> {
         elevation: 0,
         actions: [
           IconButton(
-            onPressed: () {
+            onPressed: () async {
+              await Share.share("flutterAppLinkWithGRouter.com/catelog/preview/");
               //todo logic to create and share link via
             },
             icon: const Icon(Icons.share),

@@ -1,8 +1,29 @@
+buildscript {
+    ext.kotlin_version = '1.8.0' // The Kotlin version you want to use
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Add other classpath dependencies as needed
+    }
+}
+
 allprojects {
     repositories {
         google()
         mavenCentral()
     }
+    configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10'
+    }
+}
+
 }
 
 rootProject.buildDir = '../build'
