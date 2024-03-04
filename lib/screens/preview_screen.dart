@@ -40,7 +40,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
         actions: [
           IconButton(
             onPressed: () async {
-              await Share.share("flutterAppLinkWithGRouter.com/catelog/preview/");
+              await Share.share("https://applink-demo-project.web.app/");
               //todo logic to create and share link via
             },
             icon: const Icon(Icons.share),

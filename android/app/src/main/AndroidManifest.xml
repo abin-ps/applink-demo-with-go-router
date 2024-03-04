@@ -16,8 +16,9 @@
 <action android:name="android.intent.action.View"/>
 <category android:name="android.intent.category.DEFAULT"/>
 <category android:name="android.intent.category.BROWSABLE"/>
-<data android:scheme="http" android:host="applinkdemo.com"/>
-<data android:scheme="https"/>
+<data android:scheme="http" android:host="applink-demo-project.web.app"/>
+<data android:scheme="https" android:host="applink-demo-project.web.app"/>
+
 
 </intent-filter>
 </activity>
